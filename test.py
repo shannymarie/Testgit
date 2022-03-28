@@ -1,14 +1,3 @@
-numbers = [1,2,3,4,5,6,7]
-names = ["fenico","marie","jurmel"]
-verschillende =[1,"marryme","why",21.50]
-
-print(numbers[:5])
-
-for x in numbers:
-    print(x)
-    
-for y in names:
-    print(y)
-
-for z in verschillende:
-    print(z)
+open("testfile.txt","r").read()
+print(open("testfile.txt","r").read(5))
+print(open("testfile.txt","r").readline())
