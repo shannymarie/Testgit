@@ -1,37 +1,27 @@
-Landens = ["suriname","saodi arabie","singapore","senegal"]
-Landena = ["argentinie","algeria","almeria"]
-Landenb = ["belgie","belerus","bulgarie"]
-landenall = []
-landen = []
+# Bubble sort in Python
 
-print("de S landen : ")
-for x in Landens:
-    print(x)
-
-print("de A landen :")
-for y in Landena:
-    print(y)
-
-print("de B landen : ")
-for z in Landenb:
-    print(z)
-
-start = 0 
-while start < 3:
-    land = input("Type 3 landen in : ")
-    landen.append(land)
-    start += 1
-    if start == 3:
-        print("jouw landen zijn : ")
-        for q in landen:
-            print(q)
-
-landenall.extend(Landena)
-landenall.extend(Landenb)
-landenall.extend(Landens)
-landenall.extend(landen)
-
-print("alle landen : ")
-for p in landenall:
-    print(p)
+def bubbleSort(array):
     
+  # loop to access each array element
+  for i in range(len(array)):
+
+    # loop to compare array elements
+    for j in range(0, len(array) - i - 1):
+
+      # compare two adjacent elements
+      # change > to < to sort in descending order
+      if array[j] > array[j + 1]:
+
+        # swapping elements if elements
+        # are not in the intended order
+        temp = array[j]
+        array[j] = array[j+1]
+        array[j+1] = temp
+
+
+data = [-2, 45, 0, 11, -9]
+
+bubbleSort(data)
+
+print('Sorted Array in Ascending Order:')
+print(data)
